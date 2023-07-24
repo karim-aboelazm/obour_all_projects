@@ -33,7 +33,7 @@ pytz==2023.3
 quran==1.0.0
 ratelim==0.1.6
 redis==4.5.4
-requests==2.24.0
+requests==2.31.0
 salat==0.2.0
 signals==0.0.2
 six==1.15.0
