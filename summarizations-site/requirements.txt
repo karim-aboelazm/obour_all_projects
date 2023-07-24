@@ -30,7 +30,7 @@ google-auth-oauthlib==0.4.6
 google-cloud-speech==1.2.0
 google-pasta==0.2.0
 googleapis-common-protos==1.59.0
-grpcio==1.51.3
+grpcio==1.53.0
 grpcio-status==1.48.2
 h5py==3.8.0
 huggingface-hub==0.13.3
