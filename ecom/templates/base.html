@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+    <head>
+        <title>{% block title %}{% endblock title %}</title>
+        {% include 'snippets/head.html' %}
+    </head>
+    
+    <body>
+        {% include 'snippets/header.html' %}
+        {% block content %}
+        {% endblock content %}
+        {% include 'snippets/scripts.html' %}
+    </body>
+</html>

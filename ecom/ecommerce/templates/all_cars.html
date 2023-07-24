@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    All Cars
+{% endblock title %}
+
+{% block content %}
+<!-- ***** Call to Action Start ***** -->
+<section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="cta-content">
+                    <br>
+                    <br>
+                    <h2><em>All Cars</em></h2>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Call to Action End ***** -->
+  <!-- ***** Cars Starts ***** -->
+<section class="section" id="trainers">
+    <div class="container">
+        
+        <div class="row">
+            {% for car in all_cars %}
+            <div class="col-lg-4">
+                <div class="trainer-item">
+                    <div class="image-thumb">
+                        <a href="{% url 'ecom:one_car' car.id %}"><img src="{{car.car_image.url}}" style="height: 200px;" alt=""></a>
+                    </div>
+                    <div class="car-title py-2">
+                        <p class="text-center" style="font-size: 15px ">{{car.car_type}}</p>
+                    </div>
+                    <div class="down-content">
+                        <span>
+                            <del><sup>EL</sup>{{car.car_price}} </del> &nbsp; <sup>EL</sup>{{car.price_after_discount}}
+                        </span>
+                        {% if car.car_is_new %}
+                        <h4>Car is New</h4>
+                        {% else %}
+                        <h4>Car is used</h4>
+                        {% endif %}
+                        
+
+                        <ul class="social-icons">
+                            <li><a href="">+ View Car</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <br>
+
+        
+    </div>
+</section>
+      
+{% endblock content %}
+    
+

@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Home 
+{% endblock title %}
+
+{% block content %}
+<!-- ***** Main Banner Area Start ***** -->
+<div class="main-banner" id="top">
+    <video autoplay muted loop id="bg-video">
+        <source src="{% static '' %}images/video.mp4" type="video/mp4" />
+    </video>
+
+    <div class="video-overlay header-text">
+        <div class="caption">
+            <h6>Lorem ipsum dolor sit amet</h6>
+            <h2>Best <em>car dealer</em> in town!</h2>
+            <div class="main-button">
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** Main Banner Area End ***** -->
+    <!-- ***** Cars Starts ***** -->
+    <section class="section" id="trainers">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Featured <em>Cars</em></h2>
+                        <img src="{% static '' %}images/line-dec.png" alt="">
+                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for car in all_cars|slice:"0:3" %}
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <a href="{% url 'ecom:one_car' car.id %}"><img src="{{car.car_image.url}}" style="height: 200px;" alt=""></a>
+                        </div>
+                        <div class="car-title py-2">
+                            <p class="text-center" style="font-size: 15px ">{{car.car_type}}</p>
+                        </div>
+                        <div class="down-content">
+                            <span>
+                                <del><sup>EL</sup>{{car.car_price}} </del> &nbsp; <sup>EL</sup>{{car.price_after_discount}}
+                            </span>
+                            {% if car.car_is_new %}
+                            <h4>Car is New</h4>
+                            {% else %}
+                            <h4>Car is used</h4>
+                            {% endif %}
+                            
+
+                            <ul class="social-icons">
+                                <li><a href="">+ View Car</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <br>
+
+            <div class="main-button text-center">
+                <a href="{% url 'ecom:all_cars' %}">View Cars</a>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Cars Ends ***** -->
+
+    <section class="section section-bg" id="schedule" style="background-image: url("{% static '' %}images/about-fullscreen-1-1920x700.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mx-auto offset-lg-3">
+                    <div class="section-heading dark-bg text-white">
+                        <h2>Read <em>About Us</em></h2>
+                        <img src="{% static '' %}images/line-dec.png" alt="">
+                        <p>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="text-left" style="font-size:20px">Project Name : </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span style="font-size:15px;text-align: justify">{{project.name}}</span>
+                                </div>
+                            </div>
+                        </p>
+                        <p>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="text-left"  class="text-left"style="font-size:20px">Project Description : </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span style="font-size:15px;text-align: justify">{{project.description|slice:"0:100"}}... READ MORE</span>
+                                </div>
+                            </div>
+                        </p>
+                        <p>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="text-left"  class="text-left"style="font-size:20px">Project Problems : </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <span style="font-size:15px;text-align: justify">{{project.problem|slice:"0:100"}}... READ MORE</span>
+                                </div>
+                            </div>
+                        </p>
+                        <p>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <span class="text-left"  class="text-left"style="font-size:20px">Project Motivations : </span>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <span style="font-size:15px;text-align: justify">{{project.motivation|slice:"0:100"}}... READ MORE</span>
+                                    </div>
+                                </div>
+                            </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <!-- ***** Call to Action Start ***** -->
+    <section class="section section-bg" id="call-to-action" style="background-image: url("{% static '' %}images/banner-image-1-1920x500.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content">
+                        <h2>Send us a <em>message</em></h2>
+                        <p>Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula, sit amet dapibus odio augue eget libero. Morbi tempus mauris a nisi luctus imperdiet.</p>
+                        <div class="main-button">
+                            <a href="contact.html">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Call to Action End ***** -->
+
+    <!-- ***** Testimonials Item Start ***** -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Read our <em>Testimonials</em></h2>
+                        <img src="{% static '' %}images/line-dec.png" alt="waves">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem incidunt alias minima tenetur nemo necessitatibus?</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                        <ul class="features-items">
+                            {% for part in all_parts|slice:"0:4" %}
+                            <li class="feature-item">
+                                <div class="left-icon">
+                                    <img src="{{part.car_part_image.url}}" style="width:10%" alt="First One">
+                                </div>
+                                <div class="right-content">
+                                    <p>{{part.car_part_type}}</p>
+                                    
+                                </div>
+                            </li>
+                           {% endfor %}
+                        </ul>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="features-items">
+                        {% for acc in all_accs|slice:"0:4" %}
+                        <li class="feature-item">
+                                <div class="left-icon">
+                                    <img src="{{acc.acc_image.url}}" style="width:10%" alt="First One">
+                                </div>
+                                <div class="right-content">
+                                    <p>{{acc.acc_type}}</p>
+                                    
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <br>
+
+          
+        </div>
+    </section>
+
+{% endblock content %}
+    
