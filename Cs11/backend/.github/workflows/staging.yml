@@ -1,0 +1,33 @@
+name: Deploy django on production
+
+on:
+  push:
+    branches: [main]
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps: 
+      - uses: actions/checkout@v3
+
+      - name: Install python deps
+        run: |
+          pip install --upgrade pip
+          python3 -m venv ./.venv
+          ls -la ./.venv
+          source ./.venv/bin/activate
+          pip install Fabric3==1.14.post1
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          known_hosts: ubuntu@34.232.188.142
+
+      - name: "Deploy project"
+        run: |
+          source ./.venv/bin/activate
+          fab update
+
+
+

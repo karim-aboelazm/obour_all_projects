@@ -1,0 +1,101 @@
+{% load static %}
+{% load custom_filters %}
+
+<aside id="aside-nav" class="">
+    <ul>
+        <li id="btnToggleAside">
+            <div>
+                <ion-icon name="chevron-forward-outline" role="img" class="md hydrated"></ion-icon>
+            </div>
+        </li>
+        <li id="asideLiSearch">
+            <img src="{% static  'images/Icon search.svg '%} " alt="search">
+            <input type="text" placeholder="Search">
+        </li>
+        <li 
+
+        {% with categories="all,new,articles-and-blogs,email-letters,writing-tools,social-media,sales-copy,digital-ad-copy,brainstorming-tools,personal-tools,startup-tools,website-copy"|split_string:"," %}
+        {% if request.path|has_any:categories %}
+            class="active"
+        {% else %}
+            class=""
+        {% endif %}
+    {% endwith %}
+        >
+            <a href="{% url 'home' %}">
+                <img src="{% static 'images/Icon dashboard.svg '%}" alt="dashboard">
+                <p>Home page</p>
+            </a>
+        </li>
+        <li 
+        class="
+        {% if '/long_form_editor/' in request.path %}active{% endif %}"
+        >
+            <a href="{% url 'long_form_editor' %}" title="long form editor">
+                <img src="{% static 'images/Icon edit.svg '%}" alt="long form editor">
+                <p>long form editor</p>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'chat_feather' %}">
+                <img src="{% static 'images/Icon chat.svg '%}" alt="chat">
+                <p>chat feather</p>
+            </a>
+        </li>
+        <li         class = "{% if 'email-tools/' in request.path or '/email-subjects/' in request.path %} active{% endif %}"
+        >
+            <a href="{% url 'email tools' %}">
+                <img src="{% static 'images/Icon email.svg '%}" alt="email">
+                <p>email tools</p>
+            </a>
+        </li>
+        <li
+        class = "{% if 'SocialMedia-tools/' in request.path %} active{% endif %}"
+        >
+            <a href="{% url 'social media tools' %}">
+                <img src="{% static 'images/Icon social.svg '%}" alt="email">
+                <p>social media tools</p>
+            </a>
+        </li>
+        <li class="
+            {% if 'saved-copies' in request.path %}
+                active
+            {% endif %}
+        ">
+            <a href="{% url 'saved-copies'  %}">
+                <img src="{% static 'images/Icon saved.svg '%}" alt="saved">
+                <p>saved copies</p>
+            </a>
+        </li>
+        <li class="
+        {% if 'recent-activity' in request.path %}
+            active
+        {% endif %}
+        "
+        >
+            <a href="{% url 'recent-activity' %}">
+                <img src="{% static 'images/Icon clock.svg '%}" alt="activity">
+                <p>recent activity</p>
+            </a>
+        </li>
+        <li id="liTextAccount">
+            <p id="textAccount">account</p>
+        </li>
+        <li>
+            <a href="{% url 'change_language' %}">
+                <img src="{% static 'images/Icon language.svg '%}" alt="language">
+                <p>change language</p>
+            </a>
+        </li>
+    </ul>
+    <div id="themeToggle">
+        <button id="light" class="active">
+            <img src="{% static 'images/icon sun.svg '%}" alt="sun">
+            <p>light</p>
+        </button>
+        <button id="dark">
+            <img src="{% static 'images/icon moon.svg '%}" alt="moon">
+            <p>dark</p>
+        </button>
+    </div>
+</aside>

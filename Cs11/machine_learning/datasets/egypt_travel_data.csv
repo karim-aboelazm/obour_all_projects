@@ -1,0 +1,6 @@
+interests,budget,time_of_travel,location_id,accommodation_type,preferences
+Culture and History,Medium,Off-season,1,Hotel,Pyramids of Giza;The Egyptian Museum;Karnak Temple
+Adventure,High,Peak-season,2,Hostel,Karnak Temple;Abu Simbel;Valley of the Kings
+Relaxation,Low,Shoulder-season,3,Resort,Valley of the Kings;Al-Azhar Park;Muizz Street
+Culture and History,High,Off-season,4,Airbnb,Abu Simbel;Pyramids of Giza;The Egyptian Museum
+Adventure,Medium,Peak-season,5,Hotel,Muizz Street;Karnak Temple;Valley of the Kings

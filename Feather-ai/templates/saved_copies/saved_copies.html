@@ -1,0 +1,183 @@
+{% extends 'base2.html' %}
+
+{% load static %}
+{% load custom_filters %}
+
+{% block title %}AI Article Writer | Feather.ai{% endblock  %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'Css/savedCopies.css' %}" />
+{% endblock  %}
+
+{% block bootstrap %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="main-page">
+        <form method="GET" action="{% url 'saved-copies' %}" id="date-range-form">
+        <div class="part-1">
+            <div class="btn left disabled">
+                <ion-icon name="caret-back-outline"></ion-icon>
+            </div>
+            <div class="dates">
+                <ul>
+                  {% for range in date_ranges  %}
+                  <li class="{% if active_date_range == range.start_day|add:'-'|add:range.end_day|add:'-'|add:range.month|add:'-'|add:range.year %}active{% endif %}" id="date-range-{{ forloop.counter }}" onclick="handleDateClick(this, '{{ range.start_day }}-{{ range.end_day }}-{{ range.month }}-{{ range.year }}')">
+                    {{ range.start_day }}-{{ range.end_day }} {{ range.month }}
+                </li>
+                  {% endfor %}
+                </ul>
+                <input type="hidden" id="selected-date" name="date_range">
+              </div>
+              <div class="btn right">
+                <ion-icon name="caret-forward-outline"></ion-icon>
+              </div>
+        </div>
+        </form>
+        <div class="part-2" {% if day_data %} style="display:grid"
+        {% else %}
+        style="display:block"
+        {% endif %}>
+        {% if  day_data%}
+            {% for day in day_data %}
+
+                <div class="day">
+                    <div class="head">
+                        <div class="num"><p>{{ day.day_number }}</p></div>
+                        <p>{{ day.day_name }}</p>
+                        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                    </div>
+                    {% for article in saved_articles %}
+
+                    {% if article.created_at.date.day == day.day_number  %}
+
+                        <div class="saved-page" onclick="
+                        {% if article.editor_articles.all.count > 0 %}
+                        redirectToLongFormView('{{ article.editor_articles.first.pk }}')
+
+                            {% else %}
+                            redirectToArticle('{{ article.pk }}')
+                            {% endif %}
+                        ">
+                            <div>
+                                <div class="pop" onclick="event.stopPropagation()">
+                                    <ion-icon
+                                    class="showPop"
+                                        name="ellipsis-horizontal-outline"
+                                    ></ion-icon>
+                                    <div class="icon">
+                                    <form action="{% url 'delete_article' pk=article.pk %}" method="POST" onsubmit="return confirm('Are you sure you want to delete this article?')">
+                                        {% csrf_token %}
+                                        <ul>
+                                            <li> 
+    
+                                                <p>edit</p>
+                                                <img
+                                                    src="{% static 'images/Icon ben.svg' %}"
+                                                    alt=""
+                                                />
+                                            </li>
+
+                                            <li>
+                                                <button type="submit" class="submit_btn">
+                                                    <p >delete</p>
+                                                <img src="{% static 'images/Icon  trash.svg' %}" alt="">
+                                            </button>
+                                            </li>
+                                        </ul>
+                                        <input type="hidden" name="date_range" id="date-range-input">
+
+                                        </form>
+                                    </div>
+                                </div>
+    
+                            </div>
+
+                            <p>{{ article.title}} </p>
+
+                            <div class="keys">
+                                {% for tag in article.tags|split_string:"," %}
+                                <span>{{ tag }}</span>
+
+                                {% endfor %}
+                            </div>
+                            {% with outline=article.outlines.first %}
+                            {% with suboutline=outline.suboutline_set.first %}
+
+                            <p>
+                                {{ suboutline.body|truncatechars_html:100 }}
+
+                            </p>
+                            {% endwith %}
+
+                            {% endwith %}
+                            {% if article.image %}
+                            <img src="{{ article.image.url}}" alt="">
+                            {% else %}
+                            <img src="{% static 'images/image saved page.svg' %}" alt="">
+                            {% endif %}
+                            <div class="footer">
+                                <p>{{article.created_at|time:"H:i A"}}</p>
+
+                                <div class="social">
+                                    <a href="">
+                                        <img src="{% static 'images/facebook.svg' %}" alt="">
+                                    </a>
+                                    <div class="plus">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+
+                </div>
+            {% endfor %}
+        {% else %}
+        <div class="empty" style="display: flex;">
+            <img
+                src="{% static 'images/addon-i_2%201.svg' %}"
+                alt="no article"
+            />
+            <p>
+                oops there is no articles<br>
+                selct a date range to view.
+            </p>
+        </div>
+        {% endif %}
+
+
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'js/savedCopies.js' %}"></script>
+
+<script>
+    function handleDateClick(element, date) {    
+        // Set the selected date value to the hidden input
+        var hiddenInput = document.getElementById('selected-date');
+        hiddenInput.value = date;
+
+        // Submit the form
+        var form = document.getElementById('date-range-form');
+        form.submit();
+      }
+      
+
+      function redirectToArticle(pk) {
+        var url = 'http://127.0.0.1:8000/saved-copies/article/' + pk + '/';
+        window.location.href = url;
+      }
+
+      function redirectToLongFormView(pk) {
+        var url = 'http://127.0.0.1:8000/long_form_editor/article/' + pk + '/';
+        window.location.href = url;
+      }
+  </script>
+{% endblock  %}

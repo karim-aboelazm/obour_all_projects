@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+{% block styles %}    
+<link rel="stylesheet" href="{% static 'Css/sign-in.css' %}">
+{% endblock  %}
+
+{% block bootstrap %}{% endblock  %}
+
+{% block title %}Login | Feather.ai - Best AI Writing Tool{% endblock %}
+
+{% block content %}
+{% block landing_header %}{% endblock landing_header %}
+
+<section>
+    <div class="circle"></div>
+    <div class="container">
+        <div class="form">
+            <a href="{% url 'landing' %}">
+                <img
+                    src="{% static 'images/logo-feather-ai.png' %}"
+                    alt="logo feather ai"
+                />
+            </a>
+
+            <div class="textWelcome">
+                <p>welcome back</p>
+                <p>have we met before?</p>
+            </div>
+
+            <a href="{% provider_login_url 'google' %}"  class="signWith">
+                <ion-icon name="logo-google"></ion-icon>
+                <p>sign in with GOOGLE</p>
+            </a>
+
+            <a href="#" class="signWith">
+                <ion-icon name="logo-apple"></ion-icon>
+                <p>sign in with apple</p>
+            </a>
+
+            <p>or continue with</p>
+
+          
+            <form method="POST" >
+                {% csrf_token %}
+                <label for="email">business email</label>
+                <input
+                    type="email"
+                    name="email"
+                    id=""
+                    placeholder="user@example.com"
+                />
+
+                <label for="password" id="password-label" style="display: none;">password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" style="display: none;"/>
+                {% if messages %}
+                {% for message in messages %}
+                  <span class="error active" id="email-error">
+                    <ion-icon name="alert-circle"></ion-icon>
+                    <p>{{ message }}</p>
+                </span>
+                {% endfor %}
+              {% endif %}
+                
+                <button type="submit" id="email-button">sign in with OTP</button>
+                <button type="button" id="password-button">sign in with password</button>
+            </form>
+
+            <p>
+                new to feather.ai?
+                <span>
+                    <a href="{% url 'register' %}">sign up</a>
+                </span>
+            </p>
+        </div>
+        <div class="img">
+            <img
+                src="{% static 'images/Background sign-in page.svg' %} "
+                alt="Someone looking at the phone"
+            />
+        </div>
+    </div>
+</section>
+
+{% block landing_footer %}{% endblock landing_footer %}
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const passwordButton = document.getElementById('password-button');
+        const passwordlabel = document.getElementById('password-label');
+        const passwordField = document.getElementById('password');
+        const emailField = document.getElementById('email-button');
+
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Show password field if the 'with_password' parameter is true in the URL
+        const withPassword = urlParams.get('with_password');
+        if (withPassword === 'true') {
+            passwordField.style.display = 'block';
+            passwordlabel.style.display = 'block';
+            passwordButton.innerText = 'sign in with OTP';
+            emailField.innerText = 'sign in';
+        }
+
+        // Add or remove the 'with_password' parameter on button click
+        passwordButton.addEventListener('click', function() {
+            const currentURL = new URL(window.location.href);
+            const currentWithPassword = urlParams.get('with_password');
+            if (currentWithPassword === 'true') {
+                currentURL.searchParams.delete('with_password');
+            } else {
+                currentURL.searchParams.set('with_password', 'true');
+            }
+            window.location.href = currentURL.toString();
+        });
+    });
+    
+{% comment %} 
+    function openGoogleLoginPopup(event) {
+        event.preventDefault();
+        
+        var url = "";
+        var width = 600;
+        var height = 600;
+        var left = window.screen.width / 2 - width / 2;
+        var top = window.screen.height / 2 - height / 2;
+    
+        var googleLoginWindow = window.open(
+        url,
+        "GoogleLogin",
+        "width=" + width + ", height=" + height + ", left=" + left + ", top=" + top
+        );
+    
+        // Check for successful authentication every second
+        var interval = setInterval(function() {
+        if (googleLoginWindow.closed) {
+            clearInterval(interval);
+            window.location.href = "{% url 'home' %}";
+        }
+        }, 1000);
+        
+
+    } {% endcomment %}
+</script>
+
+{% endblock %}

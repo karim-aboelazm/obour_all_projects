@@ -1,0 +1,122 @@
+[
+  {
+    "city": "Giza",
+    "latitude": 29.9792,
+    "longitude": 31.1342
+  },
+  {
+    "city": "Luxor",
+    "latitude": 25.6872,
+    "longitude": 32.6396
+  },
+  {
+    "city": "Aswan",
+    "latitude": 24.0889,
+    "longitude": 32.8998
+  },
+  {
+    "city": "Cairo",
+    "latitude": 30.0444,
+    "longitude": 31.2357
+  },
+  {
+    "city": "Sinai",
+    "latitude": 29.4914,
+    "longitude": 34.8956
+  },
+  {
+    "city": "Sharm El Sheikh",
+    "latitude": 27.9158,
+    "longitude": 34.3294
+  },
+  {
+    "city": "Hurghada",
+    "latitude": 27.2579,
+    "longitude": 33.8116
+  },
+  {
+    "city": "Red Sea",
+    "latitude": 26.8206,
+    "longitude": 33.991
+  },
+  {
+    "city": "Alexandria",
+    "latitude": 31.2156,
+    "longitude": 29.9553
+  },
+  {
+    "city": "El Alamein",
+    "latitude": 30.8375,
+    "longitude": 28.9561
+  },
+  {
+    "city": "Marsa Matruh",
+    "latitude": 31.3546,
+    "longitude": 27.237
+  },
+  {
+    "city": "Farafra",
+    "latitude": 27.06,
+    "longitude": 27.9733
+  },
+  {
+    "city": "Dahab",
+    "latitude": 28.5094,
+    "longitude": 34.5136
+  },
+  {
+    "city": "Edfu",
+    "latitude": 24.9773,
+    "longitude": 32.8749
+  },
+  {
+    "city": "Wadi Rum",
+    "latitude": 29.5833,
+    "longitude": 35.4167
+  },
+  {
+    "city": "Marsa Alam",
+    "latitude": 25.0458,
+    "longitude": 34.8806
+  },
+  {
+    "city": "Sohag",
+    "latitude": 26.5569,
+    "longitude": 31.6948
+  },
+  {
+    "city": "Ras Sedr",
+    "latitude": 29.6116,
+    "longitude": 32.3334
+  },
+  {
+    "city": "Suez",
+    "latitude": 29.9737,
+    "longitude": 32.5263
+  },
+  {
+    "city": "Natron Valley",
+    "latitude": 30.5011,
+    "longitude": 30.4322
+  },
+  {
+    "city": "Mersa Matruh",
+    "latitude": 31.3546,
+    "longitude": 27.237
+  },
+  {
+    "city": "Fayoum",
+    "latitude": 29.3084,
+    "longitude": 30.8428
+  },
+  {
+    "city": "Mersa Alam",
+    "latitude": 25.0458,
+    "longitude": 34.8806
+  },
+  {
+    "city": "El-Quseir",
+    "latitude": 26.0917,
+    "longitude": 34.2881
+  }
+]

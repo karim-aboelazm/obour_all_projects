@@ -1,0 +1,1437 @@
+[
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2023-06-07T14:23:50.572Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "1",
+            "object_repr": "القاهرة",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2023-06-07T21:02:35.490Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "1",
+            "object_repr": "اثري",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2023-06-07T21:04:32.373Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "1",
+            "object_repr": "معبد العبور",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2023-06-07T21:08:20.106Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "2",
+            "object_repr": "admin",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2023-06-07T21:12:41.856Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "2",
+            "object_repr": "القلعة",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 1,
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 1,
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 1,
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 1,
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 2,
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 2,
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 2,
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 2,
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 3,
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 3,
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 3,
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 3,
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 4,
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 4,
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 4,
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 4,
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 5,
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 5,
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 5,
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 5,
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add Token",
+            "content_type": 6,
+            "codename": "add_token"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change Token",
+            "content_type": 6,
+            "codename": "change_token"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete Token",
+            "content_type": 6,
+            "codename": "delete_token"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view Token",
+            "content_type": 6,
+            "codename": "view_token"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add token",
+            "content_type": 7,
+            "codename": "add_tokenproxy"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change token",
+            "content_type": 7,
+            "codename": "change_tokenproxy"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete token",
+            "content_type": 7,
+            "codename": "delete_tokenproxy"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view token",
+            "content_type": 7,
+            "codename": "view_tokenproxy"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 8,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 8,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 8,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 8,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add city",
+            "content_type": 9,
+            "codename": "add_city"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change city",
+            "content_type": 9,
+            "codename": "change_city"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete city",
+            "content_type": 9,
+            "codename": "delete_city"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view city",
+            "content_type": 9,
+            "codename": "view_city"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 37,
+        "fields": {
+            "name": "Can add place",
+            "content_type": 10,
+            "codename": "add_place"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 38,
+        "fields": {
+            "name": "Can change place",
+            "content_type": 10,
+            "codename": "change_place"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 39,
+        "fields": {
+            "name": "Can delete place",
+            "content_type": 10,
+            "codename": "delete_place"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 40,
+        "fields": {
+            "name": "Can view place",
+            "content_type": 10,
+            "codename": "view_place"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 41,
+        "fields": {
+            "name": "Can add place category",
+            "content_type": 11,
+            "codename": "add_placecategory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 42,
+        "fields": {
+            "name": "Can change place category",
+            "content_type": 11,
+            "codename": "change_placecategory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 43,
+        "fields": {
+            "name": "Can delete place category",
+            "content_type": 11,
+            "codename": "delete_placecategory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 44,
+        "fields": {
+            "name": "Can view place category",
+            "content_type": 11,
+            "codename": "view_placecategory"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 45,
+        "fields": {
+            "name": "Can add place gallery",
+            "content_type": 12,
+            "codename": "add_placegallery"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 46,
+        "fields": {
+            "name": "Can change place gallery",
+            "content_type": 12,
+            "codename": "change_placegallery"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 47,
+        "fields": {
+            "name": "Can delete place gallery",
+            "content_type": 12,
+            "codename": "delete_placegallery"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 48,
+        "fields": {
+            "name": "Can view place gallery",
+            "content_type": 12,
+            "codename": "view_placegallery"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 49,
+        "fields": {
+            "name": "Can add area",
+            "content_type": 13,
+            "codename": "add_area"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 50,
+        "fields": {
+            "name": "Can change area",
+            "content_type": 13,
+            "codename": "change_area"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 51,
+        "fields": {
+            "name": "Can delete area",
+            "content_type": 13,
+            "codename": "delete_area"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 52,
+        "fields": {
+            "name": "Can view area",
+            "content_type": 13,
+            "codename": "view_area"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 53,
+        "fields": {
+            "name": "Can add post",
+            "content_type": 14,
+            "codename": "add_post"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 54,
+        "fields": {
+            "name": "Can change post",
+            "content_type": 14,
+            "codename": "change_post"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 55,
+        "fields": {
+            "name": "Can delete post",
+            "content_type": 14,
+            "codename": "delete_post"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 56,
+        "fields": {
+            "name": "Can view post",
+            "content_type": 14,
+            "codename": "view_post"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 57,
+        "fields": {
+            "name": "Can add love",
+            "content_type": 15,
+            "codename": "add_love"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 58,
+        "fields": {
+            "name": "Can change love",
+            "content_type": 15,
+            "codename": "change_love"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 59,
+        "fields": {
+            "name": "Can delete love",
+            "content_type": 15,
+            "codename": "delete_love"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 60,
+        "fields": {
+            "name": "Can view love",
+            "content_type": 15,
+            "codename": "view_love"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 61,
+        "fields": {
+            "name": "Can add attachment",
+            "content_type": 16,
+            "codename": "add_attachment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 62,
+        "fields": {
+            "name": "Can change attachment",
+            "content_type": 16,
+            "codename": "change_attachment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 63,
+        "fields": {
+            "name": "Can delete attachment",
+            "content_type": 16,
+            "codename": "delete_attachment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 64,
+        "fields": {
+            "name": "Can view attachment",
+            "content_type": 16,
+            "codename": "view_attachment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 65,
+        "fields": {
+            "name": "Can add place way",
+            "content_type": 17,
+            "codename": "add_placeway"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 66,
+        "fields": {
+            "name": "Can change place way",
+            "content_type": 17,
+            "codename": "change_placeway"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 67,
+        "fields": {
+            "name": "Can delete place way",
+            "content_type": 17,
+            "codename": "delete_placeway"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 68,
+        "fields": {
+            "name": "Can view place way",
+            "content_type": 17,
+            "codename": "view_placeway"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 69,
+        "fields": {
+            "name": "Can add road",
+            "content_type": 18,
+            "codename": "add_road"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 70,
+        "fields": {
+            "name": "Can change road",
+            "content_type": 18,
+            "codename": "change_road"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 71,
+        "fields": {
+            "name": "Can delete road",
+            "content_type": 18,
+            "codename": "delete_road"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 72,
+        "fields": {
+            "name": "Can view road",
+            "content_type": 18,
+            "codename": "view_road"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 73,
+        "fields": {
+            "name": "Can add comment",
+            "content_type": 19,
+            "codename": "add_comment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 74,
+        "fields": {
+            "name": "Can change comment",
+            "content_type": 19,
+            "codename": "change_comment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 75,
+        "fields": {
+            "name": "Can delete comment",
+            "content_type": 19,
+            "codename": "delete_comment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 76,
+        "fields": {
+            "name": "Can view comment",
+            "content_type": 19,
+            "codename": "view_comment"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "authtoken",
+            "model": "token"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "authtoken",
+            "model": "tokenproxy"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "users",
+            "model": "user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 9,
+        "fields": {
+            "app_label": "places",
+            "model": "city"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 10,
+        "fields": {
+            "app_label": "places",
+            "model": "place"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 11,
+        "fields": {
+            "app_label": "places",
+            "model": "placecategory"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 12,
+        "fields": {
+            "app_label": "places",
+            "model": "placegallery"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 13,
+        "fields": {
+            "app_label": "places",
+            "model": "area"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 14,
+        "fields": {
+            "app_label": "posts",
+            "model": "post"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 15,
+        "fields": {
+            "app_label": "posts",
+            "model": "love"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 16,
+        "fields": {
+            "app_label": "posts",
+            "model": "attachment"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 17,
+        "fields": {
+            "app_label": "roads",
+            "model": "placeway"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 18,
+        "fields": {
+            "app_label": "roads",
+            "model": "road"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 19,
+        "fields": {
+            "app_label": "comments",
+            "model": "comment"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "88ywrzu4rxeklhk7b1xitq3wben3xtgj",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAQRf-FtSEUhpdL934DGRiQqoGktCvjv2uTLnR7zzn3xQJuaw3byEuYiZ3ZxE6_W8T0yG0HdMd26zz1ti5z5LvCDzr4tVN-Xg7376DiqN9aRh9JTcJ6yt4iGGdiEYAAuoBXGTUk4TSpIqRxMhXlCYQ32qJMCix7fwDTyDcg:1q6tpL:Skeo7xOK2I1wVwzIVvABmWuIVrX4oADX57YxT0hw_XQ",
+            "expire_date": "2023-06-21T14:07:55.798Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "q48hqy7oncu7n7f9ia208phmfqtfxlq9",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAQRf-FtSEUhpdL934DGRiQqoGktCvjv2uTLnR7zzn3xQJuaw3byEuYiZ3ZxE6_W8T0yG0HdMd26zz1ti5z5LvCDzr4tVN-Xg7376DiqN9aRh9JTcJ6yt4iGGdiEYAAuoBXGTUk4TSpIqRxMhXlCYQ32qJMCix7fwDTyDcg:1q6zvd:6JdLP4XtExMPynwec5muCAL7u8UdhTUb0DXvE3ARjEs",
+            "expire_date": "2023-06-21T20:38:49.463Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "s482mac7l9hbao5xvg6ot11nsv2cufik",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAQRf-FtSEUhpdL934DGRiQqoGktCvjv2uTLnR7zzn3xQJuaw3byEuYiZ3ZxE6_W8T0yG0HdMd26zz1ti5z5LvCDzr4tVN-Xg7376DiqN9aRh9JTcJ6yt4iGGdiEYAAuoBXGTUk4TSpIqRxMhXlCYQ32qJMCix7fwDTyDcg:1q70Ha:mXyL767Sp8shrAIy_ff-y5elexDahLcJz_MjzC_pFVI",
+            "expire_date": "2023-06-21T21:01:30.343Z"
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$390000$WhZLfnL43R8HV7Shwin8xO$th6Rx+heNNS7BTH8mYS8dQmCpuAzWOlyBSO3x4LBzIc=",
+            "last_login": "2023-06-07T21:01:30.335Z",
+            "is_superuser": true,
+            "username": "ESLAM",
+            "email": "eslam@eslam.com",
+            "name": "",
+            "is_active": true,
+            "is_staff": true,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 2,
+        "fields": {
+            "password": "admin",
+            "last_login": "2023-06-07T21:07:40Z",
+            "is_superuser": true,
+            "username": "admin",
+            "email": "admin@admin.com",
+            "name": "admin sun of admin",
+            "is_active": true,
+            "is_staff": true,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 1,
+        "fields": {
+            "name": "القاهرة",
+            "nick_name": "العاصمة",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "2.60",
+            "location": {
+                "let": 123,
+                "act": 22
+            },
+            "info": "fasf",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 2,
+        "fields": {
+            "name": "الجيزة",
+            "nick_name": "Giza",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "0.64",
+            "location": {
+                "let": 50,
+                "act": 3
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 3,
+        "fields": {
+            "name": "الأسكندرية",
+            "nick_name": "Alexandria",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "1.44",
+            "location": {
+                "let": 50,
+                "act": 21
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 4,
+        "fields": {
+            "name": "الدقهلية",
+            "nick_name": "Dakahlia",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "2.56",
+            "location": {
+                "let": 80,
+                "act": 15
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 5,
+        "fields": {
+            "name": "البحر الأحمر",
+            "nick_name": "Red Sea",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "4.00",
+            "location": {
+                "let": 30,
+                "act": 18
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 6,
+        "fields": {
+            "name": "البحيرة",
+            "nick_name": "Beheira",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "5.76",
+            "location": {
+                "let": 20,
+                "act": 21
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 7,
+        "fields": {
+            "name": "الفيوم",
+            "nick_name": "Fayoum",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "7.84",
+            "location": {
+                "let": 40,
+                "act": 0
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 8,
+        "fields": {
+            "name": "الغربية",
+            "nick_name": "Gharbiya",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "10.24",
+            "location": {
+                "let": 0,
+                "act": 3
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 9,
+        "fields": {
+            "name": "الإسماعلية",
+            "nick_name": "Ismailia",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "12.96",
+            "location": {
+                "let": 20,
+                "act": 21
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 10,
+        "fields": {
+            "name": "المنوفية",
+            "nick_name": "Menofia",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "16.00",
+            "location": {
+                "let": 50,
+                "act": 24
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 11,
+        "fields": {
+            "name": "المنيا",
+            "nick_name": "Minya",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "19.36",
+            "location": {
+                "let": 0,
+                "act": 18
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 12,
+        "fields": {
+            "name": "القليوبية",
+            "nick_name": "Qaliubiya",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "23.04",
+            "location": {
+                "let": 30,
+                "act": 0
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 13,
+        "fields": {
+            "name": "الوادي الجديد",
+            "nick_name": "New Valley",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "27.04",
+            "location": {
+                "let": 40,
+                "act": 15
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 14,
+        "fields": {
+            "name": "السويس",
+            "nick_name": "Suez",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "31.36",
+            "location": {
+                "let": 0,
+                "act": 6
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 15,
+        "fields": {
+            "name": "اسوان",
+            "nick_name": "Aswan",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "36.00",
+            "location": {
+                "let": 20,
+                "act": 27
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 16,
+        "fields": {
+            "name": "اسيوط",
+            "nick_name": "Assiut",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "40.96",
+            "location": {
+                "let": 0,
+                "act": 18
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 17,
+        "fields": {
+            "name": "بني سويف",
+            "nick_name": "Beni Suef",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "46.24",
+            "location": {
+                "let": 50,
+                "act": 0
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 18,
+        "fields": {
+            "name": "بورسعيد",
+            "nick_name": "Port Said",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "51.84",
+            "location": {
+                "let": 80,
+                "act": 3
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 19,
+        "fields": {
+            "name": "دمياط",
+            "nick_name": "Damietta",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "57.76",
+            "location": {
+                "let": 90,
+                "act": 0
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 20,
+        "fields": {
+            "name": "الشرقية",
+            "nick_name": "Sharkia",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "64.00",
+            "location": {
+                "let": 30,
+                "act": 9
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 21,
+        "fields": {
+            "name": "جنوب سيناء",
+            "nick_name": "South Sinai",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "70.56",
+            "location": {
+                "let": 70,
+                "act": 9
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 22,
+        "fields": {
+            "name": "كفر الشيخ",
+            "nick_name": "Kafr Al sheikh",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "77.44",
+            "location": {
+                "let": 30,
+                "act": 0
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 23,
+        "fields": {
+            "name": "مطروح",
+            "nick_name": "Matrouh",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "84.64",
+            "location": {
+                "let": 10,
+                "act": 15
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 24,
+        "fields": {
+            "name": "الأقصر",
+            "nick_name": "Luxor",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "92.16",
+            "location": {
+                "let": 10,
+                "act": 3
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 25,
+        "fields": {
+            "name": "قنا",
+            "nick_name": "Qena",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "100.00",
+            "location": {
+                "let": 50,
+                "act": 21
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 26,
+        "fields": {
+            "name": "شمال سيناء",
+            "nick_name": "North Sinai",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "108.16",
+            "location": {
+                "let": 70,
+                "act": 18
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.city",
+        "pk": 27,
+        "fields": {
+            "name": "سوهاج",
+            "nick_name": "Sohag",
+            "main_Image": "places/305892800_5407515466022767_1476377624859561250_n_K7YEXku.jpg",
+            "area": "116.64",
+            "location": {
+                "let": 70,
+                "act": 24
+            },
+            "info": "idgaf!!?",
+            "location_text": "تنزل تتمشي"
+        }
+    },
+    {
+        "model": "places.placecategory",
+        "pk": 1,
+        "fields": {
+            "name": "اثري",
+            "icon": "icons/Wikimedia_2016_-34.jpg"
+        }
+    },
+    {
+        "model": "places.place",
+        "pk": 1,
+        "fields": {
+            "city": 1,
+            "main_Image": "places/Wikimedia_2016_-34_CtZ75f1.jpg",
+            "category": 1,
+            "name": "معبد العبور",
+            "price": 0,
+            "rate": 0.0,
+            "location": {
+                "let": 123,
+                "act": 22
+            },
+            "info": "if it word do not touch it",
+            "location_text": "القاهرة رمسيس",
+            "gallery": []
+        }
+    },
+    {
+        "model": "places.place",
+        "pk": 2,
+        "fields": {
+            "city": 3,
+            "main_Image": "places/Wikimedia_2016_-34_hQM1eNJ.jpg",
+            "category": 1,
+            "name": "القلعة",
+            "price": 0,
+            "rate": 0.0,
+            "location": {
+                "let": 123,
+                "act": 22
+            },
+            "info": "القلعة الي هي اصلا قالعة",
+            "location_text": "اسكندرية  اخر الكورنيش",
+            "gallery": []
+        }
+    }
+]

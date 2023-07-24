@@ -1,0 +1,108 @@
+location_id,location_name,category,location,latitude,longitude,rating,user_id
+1001,Pyramids of Giza,Historical Landmark,Giza,29.9792,31.1342,4.5,1
+1002,Karnak Temple,Landmark,Luxor,25.7188,32.6573,4.6,1
+1003,Valley of the Kings,Historical Landmark,Luxor,25.7401,32.6012,4.7,1
+1004,Abu Simbel,Historical Landmark,Aswan,22.3375,31.6258,4.8,1
+1005,Muizz Street,Market,Cairo,30.0404,31.2494,4.4,1
+1006,Al-Azhar Park,Park,Cairo,30.0383,31.2617,4.3,1
+1007,The Egyptian Museum,Museum,Cairo,30.0478,31.2336,4.6,1
+1008,Citadel of Cairo,Historical Landmark,Cairo,30.0299,31.2612,4.5,1
+1009,Khan el-Khalili,Market,Cairo,30.0461,31.2626,4.4,1
+1010,Philae Temple,Historical Landmark,Aswan,24.0256,32.8853,4.7,2
+1011,Aswan Botanical Garden,Garden,Aswan,24.0737,32.8789,4.4,2
+1012,Egyptian Museum,Landmark,Cairo,30.0478,31.2336,4.5,2
+1013,Cairo Tower,Observation Deck,Cairo,30.0455,31.2243,4.3,2
+1014,Al-Muizz Street,Market,Cairo,30.0404,31.2494,4.1,2
+1015,El Moez Street,Market,Cairo,30.0398,31.2609,4,2
+1016,Al-Azhar Mosque,Mosque,Cairo,30.0459,31.2627,4.6,2
+1017,Abdeen Palace,Museum,Cairo,30.0432,31.2423,4.2,2
+1018,Museum of Islamic Art,Museum,Cairo,30.0483,31.2299,4.7,2
+1019,Saint Catherine's Monastery,Monastery,Sinai,28.5538,33.9759,4.5,3
+1020,Mount Sinai,Hiking Trail,Sinai,28.5392,33.9757,4.7,3
+1021,Sharm El Sheikh,Beach,Sharm El Sheikh,27.9158,34.3294,4.4,3
+1022,Hurghada,Beach,Hurghada,27.2579,33.8116,4.3,3
+1023,Ras Mohammed National Park,National Park,Sharm El Sheikh,27.7559,34.2629,4.5,3
+1024,St. Anthony's Monastery,Monastery,Red Sea,28.5606,33.9049,4.6,3
+1025,Qaitbay Citadel,Historical Landmark,Alexandria,31.214,29.8857,4.4,4
+1026,Montaza Palace,Park,Alexandria,31.2956,30.0484,4.3,4
+1027,Pompey's Pillar,Historical Landmark,Alexandria,31.2089,29.9092,4.5,4
+1028,Catacombs of Kom el Shoqafa,Historical Landmark,Alexandria,31.2122,29.9061,4.6,4
+1029,Cleopatra's Palace,Historical Landmark,Alexandria,31.2231,29.9395,4.5,4
+1030,The Hanging Church,Church,Cairo,30.0079,31.2307,4.7,5
+1031,Bab Zuweila,Historical Landmark,Cairo,30.0467,31.2458,4.5,5
+1032,Mosque-Madrassa of Sultan Hassan,Mosque,Cairo,30.0297,31.259,4.6,5
+1033,Mosque of Ibn Tulun,Mosque,Cairo,30.0284,31.2496,4.7,5
+1034,Cairo Opera House,Opera House,Cairo,30.0429,31.2242,4.4,5
+1035,Cairo Tower,Observation Deck,Cairo,30.0455,31.2243,4.5,5
+1036,Muizz Street,Market,Cairo,30.0404,31.2494,4.2,5
+1037,Saqqara,Historical Landmark,Giza,29.8717,31.2164,4.7,6
+1038,Dahshur,Historical Landmark,Giza,29.7933,31.1553,4.6,6
+1039,Memphis,Historical Landmark,Cairo,29.8488,31.2495,4.5,6
+1040,Step Pyramid of Djoser,Historical Landmark,Giza,29.8711,31.2165,4.7,6
+1041,Giza Necropolis,Historical Landmark,Giza,29.9793,31.1325,4.5,6
+1042,Sphinx,Historical Landmark,Giza,29.9753,31.1376,4.6,6
+1043,Saint Catherine's Monastery,Monastery,Sinai,28.5538,33.9759,4.5,7
+1044,Mount Sinai,Hiking Trail,Sinai,28.5392,33.9757,4.7,7
+1045,Sharm El Sheikh,Beach,Sharm El Sheikh,27.9158,34.3294,4.4,7
+1046,Hurghada,Beach,Hurghada,27.2579,33.8116,4.3,7
+1047,Ras Mohammed National Park,National Park,Sharm El Sheikh,27.7559,34.2629,4.5,7
+1048,St. Anthony's Monastery,Monastery,Red Sea,28.5606,33.9049,4.6,7
+1049,Alexandria Library,Landmark,Alexandria,31.2089,29.9092,4.5,8
+1050,Abu Simbel temples,Historical Landmark,Aswan,22.3379,31.6253,4.7,8
+1051,El Alamein War Museum,Museum,El Alamein,30.8345,28.9524,4.5,9
+1052,Siwa Oasis,Oasis,Marsa Matruh,29.2036,25.5193,4.6,9
+1053,Montaza Beach,Beach,Alexandria,31.2887,30.0094,4.3,9
+1054,White Desert,Natural Landmark,Farafra,27.0606,27.9747,4.7,10
+1055,Dahab,Beach,Dahab,28.5099,34.5133,4.4,10
+1056,Temple of Edfu,Ancient Temple,Edfu,24.9775,32.8772,4.6,10
+1057,Wadi Rum,Desert,Wadi Rum,29.5852,35.4269,4.5,11
+1058,El-Gouna,Resort,Hurghada,27.3945,33.6809,4.8,11
+1059,Montaza Palace Gardens,Garden,Alexandria,31.2949,30.0524,4.3,11
+1060,Marsa Alam,Beach,Marsa Alam,25.0602,34.8937,4.7,12
+1061,Mount Catherine,Hiking Trail,Sinai,28.5541,33.9565,4.6,12
+1062,Abydos Temple,Historical Landmark,Sohag,26.1807,31.9176,4.4,12
+1063,Ras Sedr,Beach,Ras Sedr,29.6195,32.2951,4.3,12
+1064,Giza Zoo,Zoo,Giza,30.0265,31.2117,4.5,13
+1065,Saqqara Museum,Museum,Giza,29.8744,31.2172,4.6,13
+1066,Marsa Matruh,Beach,Marsa Matruh,31.3522,27.2453,4.4,13
+1067,Montaza Gardens,Park,Alexandria,31.2878,30.0515,4.5,14
+1068,Kom Ombo Temple,Ancient Temple,Aswan,24.4522,32.9278,4.3,14
+1069,Mons Claudianus,Archaeological Site,Suez,27.3057,33.2967,4.7,14
+1070,Wadi El Natrun,Desert,Natron Valley,30.5158,30.5545,4.6,15
+1071,Saint Catherine's Cathedral,Cathedral,Sinai,28.5539,33.9743,4.4,15
+1072,Dahab Blue Hole,Diving Spot,Dahab,28.5418,34.5359,4.5,15
+1073,Mersa Matruh,Beach,Mersa Matruh,31.3489,27.2309,4.7,16
+1074,El Fayoum,Oasis,Fayoum,29.3084,30.8428,4.6,16
+1075,Qarun Lake,Lake,Fayoum,29.5293,30.8611,4.4,16
+1076,Mersa Alam Beach,Beach,Mersa Alam,25.0869,34.9049,4.5,17
+1077,Ancient Roman Theater,Theater,Alexandria,31.2011,29.8994,4.3,17
+1078,Blue Lagoon,Beach,Dahab,28.4908,34.5094,4.7,17
+1079,El-Quseir,Beach,El-Quseir,26.1039,34.2806,4.6,18
+1080,El Moez Street Market,Market,Cairo,30.0422,31.2599,4.4,18
+1081,Sultan Qalawun Complex,Complex,Cairo,30.0468,31.2539,4.5,18
+1082,Montaza Royal Palace,Palace,Alexandria,31.2949,30.0508,4.7,19
+1083,Habu Temple,Ancient Temple,Luxor,25.7192,32.5925,4.6,19
+1084,Zeitoun Church,Church,Cairo,30.0144,31.2775,4.4,19
+1085,Hurghada Marina,Marina,Hurghada,27.2596,33.8118,4.5,20
+1086,Coptic Museum,Museum,Cairo,30.0107,31.2252,4.3,20
+1087,Old Cairo,Historical Area,Cairo,30.0074,31.2314,4.7,20
+1088,Temple of Debod,Ancient Temple,Aswan,24.4116,32.9267,4.6,21
+1089,Wissa Wassef Art Centre,Art Gallery,Giza,29.8747,31.2219,4.4,21
+1090,Al-Qasr,Garden,Luxor,25.7139,32.5943,4.5,21
+1091,Monte Carlo Sharm Resort & Spa,Resort,Sharm El Sheikh,27.9111,34.3247,4.7,22
+1092,El Rifai Mosque,Mosque,Cairo,30.0511,31.2589,4.6,22
+1093,Ramses Station,Historical Landmark,Cairo,30.0586,31.2458,4.4,22
+1094,Al-Azhar Mosque Library,Library,Cairo,30.0459,31.2619,4.5,23
+1095,Qasr El Nil Bridge,Bridge,Cairo,30.0507,31.2302,4.3,23
+1096,Karnak Sound and Light Show,Entertainment,Luxor,25.7183,32.6583,4.7,23
+1097,Aswan High Dam,Hydroelectric Dam,Aswan,23.9624,32.8854,4.6,24
+1098,Al-Azhar Park Lake,Lake,Cairo,30.0358,31.2618,4.4,24
+1099,Gabalaya Park and Aquarium,Park,Alexandria,31.2039,29.8905,4.5,24
+1100,Cairo Marriott Hotel & Omar Khayyam Casino,Hotel,Cairo,30.0445,31.2324,4.7,25
+1101,Borg El Arab Beach Hotel,Hotel,Alexandria,30.5445,29.1375,3.5,26
+1102,Lake House by Tunisia Green Resort,Hotel,Faiyum,29.7412,30.4061,4.5,27
+1103,Jolie Ville Hotel,Hotel,Luxor,30.0438,31.2206,2.5,28
+1104,Pickalbatros Oasis Port Ghalib,Hotel,Marsa Alam,26.1208,34.2947,3.7,29
+1105,Susanna Hotel,Hotel,Luxor,25.6904,32.6382,1.5,30
+1106,Bellagio Beach Resort,Beach Resort,Hurghada,27.2367,33.8369,4.3,1
+1107,Coral Sun Beach,Beach,Red Sea,29.0271,32.8614,4.7,2

@@ -1,0 +1,51 @@
+location_id,location_name,category,location,latitude,longitude,rating,user_id
+1,Pyramids of Giza,Historical Landmark,Giza,29.9773,31.1325,4.5,1
+2,Karnak Temple,Landmark,Luxor,25.7188,32.6572,4.6,1
+3,Valley of the Kings,Historical Landmark,Luxor,25.7402,32.6011,4.7,1
+4,Abu Simbel,Historical Landmark,Aswan,22.3375,31.6258,4.8,1
+5,Muizz Street,Market,Cairo,30.047,31.2468,4.4,1
+6,Al-Azhar Park,Park,Cairo,30.0455,31.2642,4.3,1
+7,The Egyptian Museum,Museum,Cairo,30.0478,31.2336,4.6,1
+8,Citadel of Cairo,Historical Landmark,Cairo,30.0295,31.2614,4.5,1
+9,Khan el-Khalili,Market,Cairo,30.0461,31.2626,4.4,1
+10,Philae Temple,Historical Landmark,Aswan,24.0248,32.8853,4.7,2
+11,Aswan Botanical Garden,Garden,Aswan,24.0821,32.8849,4.4,2
+12,Egyptian Museum,Landmark,Cairo,30.047,31.2336,4.5,2
+13,Cairo Tower,Observation Deck,Cairo,30.0455,31.2243,4.3,2
+14,Al-Muizz Street,Market,Cairo,30.0404,31.2494,4.1,2
+15,El Moez Street,Market,Cairo,30.0389,31.2596,4,2
+16,Al-Azhar Mosque,Mosque,Cairo,30.0459,31.2627,4.6,2
+17,Abdeen Palace,Museum,Cairo,30.0432,31.2423,4.2,2
+18,Museum of Islamic Art,Museum,Cairo,30.0477,31.2309,4.7,2
+19,Saint Catherine's Monastery,Monastery,Sinai,28.554,33.9739,4.5,3
+20,Mount Sinai,Hiking Trail,Sinai,28.5377,33.9757,4.7,3
+21,Sharm El Sheikh,Beach,Sharm El Sheikh,27.9158,34.3294,4.4,3
+22,Hurghada,Beach,Hurghada,27.2579,33.8116,4.3,3
+23,Ras Mohammed National Park,National Park,Sharm El Sheikh,27.9215,34.3032,4.5,3
+24,St. Anthony's Monastery,Monastery,Red Sea,28.5634,33.9124,4.6,3
+25,Qaitbay Citadel,Historical Landmark,Alexandria,31.214,29.8857,4.4,4
+26,Montaza Palace,Park,Alexandria,31.2836,30.0033,4.3,4
+27,Pompey's Pillar,Historical Landmark,Alexandria,31.2001,29.8977,4.5,4
+28,Catacombs of Kom el Shoqafa,Historical Landmark,Alexandria,31.2009,29.9198,4.6,4
+29,Cleopatra's Palace,Historical Landmark,Alexandria,31.2005,29.9074,4.5,4
+30,The Hanging Church,Church,Cairo,30.0071,31.2288,4.7,5
+31,Bab Zuweila,Historical Landmark,Cairo,30.0457,31.2454,4.5,5
+32,Mosque-Madrassa of Sultan Hassan,Mosque,Cairo,30.0287,31.2591,4.6,5
+33,Mosque of Ibn Tulun,Mosque,Cairo,30.027,31.2456,4.7,5
+34,Cairo Opera House,Opera House,Cairo,30.0422,31.2246,4.4,5
+35,Cairo Tower,Observation Deck,Cairo,30.0455,31.2243,4.5,5
+36,Muizz Street,Market,Cairo,30.0404,31.2494,4.2,5
+37,Saqqara,Historical Landmark,Giza,29.8717,31.2164,4.7,6
+38,Dahshur,Historical Landmark,Giza,29.7982,31.2107,4.6,6
+39,Memphis,Historical Landmark,Cairo,29.8479,31.3352,4.5,6
+40,Step Pyramid of Djoser,Historical Landmark,Giza,29.8712,31.2159,4.7,6
+41,Giza Necropolis,Historical Landmark,Giza,29.9774,31.1325,4.5,6
+42,Sphinx,Historical Landmark,Giza,29.9753,31.1376,4.6,6
+43,Saint Catherine's Monastery,Monastery,Sinai,28.554,33.9739,4.5,7
+44,Mount Sinai,Hiking Trail,Sinai,28.5377,33.9757,4.7,7
+45,Sharm El Sheikh,Beach,Sharm El Sheikh,27.9158,34.3294,4.4,7
+46,Hurghada,Beach,Hurghada,27.2579,33.8116,4.3,7
+47,Ras Mohammed National Park,National Park,Sharm El Sheikh,27.9215,34.3032,4.5,7
+48,St. Anthony's Monastery,Monastery,Red Sea,28.5634,33.9124,4.6,7
+49,Alexandria Library,Landmark,Alexandria,31.2089,29.9092,4.5,8
+50,Abu Simbel temples,Historical Landmark,Aswan,22.3376,31.6258,4.7,8

@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'Css/sign-up.css' %}" />
+<style>
+    #password,
+    #confirm_password,
+    #password_label,
+    #confirm_password_label {
+        display: none;
+    }
+</style>
+{% endblock  %}
+{% block bootstrap %}{% endblock  %}
+
+{% block title %}Sign Up | Feather.ai - Best AI Writing Tool{% endblock %}
+
+{% block content %}
+{% block landing_header %}{% endblock landing_header %}
+        
+<section>
+    <div class="circle"></div>
+    <div class="container">
+        <div class="form">
+            <a href="{% url 'landing' %}">
+                <img src="{% static 'images/logo-feather-ai.png' %}" alt="logo feather ai" />
+            </a>
+            <a href="{% provider_login_url 'google' %}" class="signWith">
+                <ion-icon name="logo-google"></ion-icon>
+                <p>sign in with GOOGLE</p>
+            </a>
+
+            <a href="#" class="signWith">
+                <ion-icon name="logo-apple"></ion-icon>
+                <p>sign in with apple</p>
+            </a>
+            <p>or continue with</p>
+
+            <form method="POST">
+                {% csrf_token %}
+
+                <label for="full_name">full name</label>
+                <input type="text" name="full_name" id="full_name" placeholder="Enter your full name here" />
+                <label for="email">Email</label>
+                <input type="email" name="email" id="" placeholder="user@example.com" />
+                <label for="password" id="password_label">password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" />
+                <label for="confirm_password" id="confirm_password_label">confirm password</label>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm your password" />
+                {% if messages %}
+                {% for message in messages %}
+                  <span class="error active" id="email-error">
+                    <ion-icon name="alert-circle"></ion-icon>
+                    <p>{{ message }}</p>
+                </span>
+                {% endfor %}
+              {% endif %}
+                <button type="submit" id="signup-button">Sign Up with OTP</button>
+                <button type="button" id="password-button">Sign up with Password</button>
+            
+            </form>
+
+            <p>already have an account? <span>
+                <a href="{% url 'login' %}">sign in</a>
+            </span></p>
+        </div>
+        <div class="img">
+            <img src="{% static 'images/sign-up-page-img.png' %}" alt="Someone looking at the phone" />
+        </div>
+    </div>
+</section>
+
+{% block landing_footer %}{% endblock landing_footer %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const passwordButton = document.getElementById('password-button');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm_password');
+        const passwordLabel = document.getElementById('password_label');
+        const confirmPasswordLabel = document.getElementById('confirm_password_label');
+        const signupButton = document.getElementById('signup-button');
+        let passwordVisible = false;
+
+        passwordButton.addEventListener('click', function() {
+            passwordVisible = !passwordVisible;
+            passwordInput.style.display = passwordVisible ? 'block' : 'none';
+            confirmPasswordInput.style.display = passwordVisible ? 'block' : 'none';
+            passwordLabel.style.display = passwordVisible ? 'block' : 'none';
+            confirmPasswordLabel.style.display = passwordVisible ? 'block' : 'none';
+            passwordButton.innerText = passwordVisible ? 'Sign up with OTP' : 'Sign up with Password';
+            signupButton.innerText = passwordVisible ? 'Sign Up' : 'Sign Up with OTP';
+
+            const urlParams = new URLSearchParams(window.location.search);
+            urlParams.set('with_password', passwordVisible.toString());
+            const newUrl = window.location.pathname + '?' + urlParams.toString();
+            history.pushState(null, null, newUrl);
+        });
+    });
+
+{% comment %}     
+    function openGoogleLoginPopup(event) {
+        event.preventDefault();
+        
+        var url = "{% provider_login_url 'google' %}";
+        var width = 600;
+        var height = 600;
+        var left = window.screen.width / 2 - width / 2;
+        var top = window.screen.height / 2 - height / 2;
+    
+        var googleLoginWindow = window.open(
+        url,
+        "GoogleLogin",
+        "width=" + width + ", height=" + height + ", left=" + left + ", top=" + top
+        );
+    
+        // Check for successful authentication every second
+        var interval = setInterval(function() {
+        if (googleLoginWindow.closed) {
+            clearInterval(interval);
+            window.location.href = "{% url 'home' %}";
+        }
+        }, 1000);
+        
+
+    } {% endcomment %}
+</script>
+{% endblock %}

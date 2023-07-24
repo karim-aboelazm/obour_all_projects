@@ -1,0 +1,320 @@
+Appendix
+7.1	Source Code:
+001	#Import the Open-CV extra functionalities
+002	from picamera import PiCamera
+003	from picamera.array import PiRGBArray
+004	from gtts import gTTS
+005	from pygame import mixer
+006	from googletrans import Translator
+007	import os
+008	import speech_recognition as sr
+009	import cv2
+010	import time
+011	from datetime import datetime
+012	from imutils import paths
+013	import face_recognition
+014	import pickle
+015	import imutils
+016	import pytesseract
+017	
+018	cam = PiCamera()
+019	cam.resolution = (624, 416)
+020	
+021	cam.sharpness = 60
+022	#cam.vflip = True
+023	#cam.rotation = 180
+024	
+025	
+026	classNames = []
+027	
+028	with open(classFile,"rt") as f:
+029	     classNames = f.read().rstrip("\n").split("\n")
+030	configPath = "/home/torky/Desktop/Object_Detection_Files/ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt"
+031	weightsPath = "/home/torky/Desktop/Object_Detection_Files/frozen_inference_graph.pb"
+032	net = cv2.dnn_DetectionModel(weightsPath,configPath)
+033	net.setInputSize(320,320)
+034	net.setInputScale(1.0/ 127.5)
+035	net.setInputMean((127.5, 127.5, 127.5))
+036	
+037	
+038	
+039	def transToAr(text): 
+040	        translator = Translator()
+041	        translation = translator.translate(text, dest="ar")
+042	        return translation.text
+043	
+044	def say(output):    
+045	          output = transToAr(output)
+046	         mixer.init()
+047	         mixer.music.load('x.mp3')
+048	         mixer.music.play()
+049	         while mixer.music.get_busy():
+050	                x=1
+051	def saye(output):
+052	          myobj = gTTS(text=output, lang='en', slow=False)
+053	          myobj.save("x.mp3")
+054	          mixer.init()
+055	          mixer.music.load('x.mp3')
+056	           mixer.music.play()
+057	
+058	def listen():
+059	listening = True
+060	while listening:   
+061	        r = sr.Recognizer()
+062	        with sr.Microphone() as source:
+063	            print("Listening .. ")
+064	            r.pause_threshold = 1
+065	            audio = r.listen(source,0,4)
+066	             try:
+067	                print("Recognizing ..")
+068	                query = r.recognize_google(audio,language='ar-AR')
+069	                print(f"You Said : {query}")
+070	                translator = Translator()
+071	                print(translation.text)
+072	                return translation.text
+073	            except:
+074	                print(res)
+075	                say(res)
+076	def getTime():
+077	    now = datetime.now()
+078	    x = (now.strftime("the date is %y/%m/%d while the time is %H:%M"))
+079	    say(x)
+080	
+081	def addperson(image):
+082	    say('What is the name of the person you want to add')
+083	    name=listen()
+084	    path = "/home/torky/project/newdataset"
+085	    os.mkdir(os.path.join(path,name))
+086	    img_name = "newdataset/"+ name +"/image_{}.jpg"
+087	    cv2.imwrite(img_name, image)
+088	
+089	def trainn():    
+090	    print("[INFO] start processing faces...")
+091	    imagePaths = list(paths.list_images("newdataset"))
+092	
+093	# initialize the list of known encodings and known names
+094	    knownEncodings = []
+095	    knownNames = []
+096	
+097	   # loop over the image paths
+098	    for (i, imagePath) in enumerate(imagePaths):
+099	       # extract the person name from the image path
+100	       print("[INFO] processing image {}/{}".format(i + 1, 
+101	            len(imagePaths)))
+102	       name = imagePath.split(os.path.sep)[-2]
+103	
+104	       # load the input image and convert it from RGB (OpenCV ordering)
+105	       # to dlib ordering (RGB)
+106	       image = cv2.imread(imagePath)
+107	       rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+108	
+109	       # detect the (x, y)-coordinates of the bounding boxes
+110	       # corresponding to each face in the input image
+111	       boxes = face_recognition.face_locations(rgb, 
+112	             model="hog")
+113	
+114	       # compute the facial embedding for the face
+115	       encodings = face_recognition.face_encodings(rgb, boxes)
+116	
+117	       # loop over the encodings 
+118	       for encoding in encodings:
+119	          # add each encoding + name to our set of known names and
+120	          # encodings
+121	          knownEncodings.append(encoding)
+122	          knownNames.append(name)
+123	
+124	    # dump the facial encodings + names to disk
+125	    print("[INFO] serializing encodings...")
+126	    data = {"encodings": knownEncodings, "names": knownNames}
+127	    f = open("encodings.pickle", "wb")
+128	    f.write(pickle.dumps(data))
+129	    f.close()
+130	
+131	def face_detection(image):
+132	    #Determine faces from encodings.pickle file model created from train_model.py
+133	    encodingsP = "encodings.pickle"
+134	    # load the known faces and embeddings along with OpenCV's Haar
+135	    # cascade for face detection
+136	    data = pickle.loads(open(encodingsP, "rb").read())   
+137	    boxes = face_recognition.face_locations(image)    
+138	    encodings = face_recognition.face_encodings(image, boxes) 
+139	     names = []    
+140	    for encoding in encodings:
+141	        matches = face_recognition.compare_faces(data["encodings"],encoding)        
+142	        name = "Unknown" #if face is not recognized, then print Unknown
+143	        #say(name)
+144	
+145	        if True in matches:
+146	            matchedIdxs = [i for (i, b) in enumerate(matches) if b]
+147	            counts = {}
+148	            for i in matchedIdxs:
+149	                name = data["names"][i]
+150	                counts[name] = counts.get(name, 0) + 1
+151	            
+152	
+153	            name = max(counts, key=counts.get)           
+154	        print(name)
+155	        say(name)    
+156	        names.append(name)
+157	
+158	
+159	    cv2.imshow("Facial Recognition is Running", image)
+160	    key = cv2.waitKey(1) & 0xFF
+161	
+162	  if key == ord("Q"):
+163	        cv2.destroyWindow("Facial Recognition is Running")
+164	#         break
+165	
+166	
+167	def object_detection(image):
+168	    #This is to set up what the drawn box size/colour is and the font/size/colour of the name tag and confidence label   
+169	    def getObjects(img, thres, nms, draw=True, objects=[]):
+170	        classIds, confs, bbox
+171	net.detect(image,confThreshold=thres,nmsThreshold=nms)
+172	    #Below has been commented out, if you want to print each sighting of an object to the console you can uncomment below     
+173	    #print(classIds,bbox)
+174	        if len(objects) == 0: objects = classNames
+175	        objectInfo =[]
+176	        if len(classIds) != 0:
+177	            for classId, confidence,box in zip(classIds.flatten(),confs.flatten(),bbox):
+178	                className = classNames[classId - 1]
+179	                if className in objects: 
+180	                    objectInfo.append([box,className])
+181	                    if (draw):
+182	                        cv2.rectangle(img,box,color=(0,255,0),thickness=2)
+183	                        cv2.putText(image, classNames[classId-1].upper(),(box[0] + 10,box[1] + 30),
+184	                        cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2)
+185	                        cv2.putText(image,str(round(confidence*100,2)),(box[0] + 200,box[1] + 30),
+186	                        cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2)
+187	                        
+188	                        print(className)
+189	                        say("there is A")
+190	                        say(className)
+191	
+192	        return image,objectInfo
+193	
+194	    result, objectInfo = getObjects(image,0.45,0.2)
+195	    cv2.imshow("Output",image)
+196	
+197	def getObjects(img, thres, nms, draw=True, objects=[]):
+198	    classIds, confs, bbox = net.detect(img,confThreshold=thres,nmsThreshold=nms)
+199	#Below has been commented out, if you want to print each sighting of an object to the console you can uncomment below     
+200	#print(classIds,bbox)
+201	    if len(objects) == 0: objects = classNames
+202	    objectInfo =[]
+203	    if len(classIds) != 0:
+204	            if className in objects: 
+205	                objectInfo.append(className)
+206	                if (draw):
+207	                    cv2.rectangle(img,box,color=(0,255,0),thickness=2)
+208	                    cv2.putText(img,classNames[classId-1].upper(),(box[0]+10,box[1]+30),
+209	                    cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2)
+210	                   cv2.putText(img,str(round(confidence*100,2)),(box[0]+200,box[1]+30),
+211	                    cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2)
+212	    return img,objectInfo
+213	
+214	def search():
+215	    say("what object do you want to search")
+216	    item=listen()
+217	    print(item)
+218	    for frame in cam.capture_continuous(rawCapture, format="bgr", use_video_port=True):
+219	        image = frame.array
+220	        cv2.imshow("Search", image)
+221	        key = cv2.waitKey(1) 
+222	        rawCapture.truncate(0)
+223	        result, objectInfo = getObjects(image,0.6,0.2,objects=[item])
+224	        if len(objectInfo)>0:
+225	            x="here"
+226	            print(x)
+227	            say("here")
+228	        if key == ord("S"):
+229	            break
+230	    x="search is ended"
+231	    say(x)
+232	    cv2.destroyAllWindows()
+233	    operate()
+234	
+235	def read(image):
+236	    try:
+237	        Text = pytesseract.image_to_string(image)
+238	        print(Text)
+239	        cv2.imshow("Frame",image)
+240	        saye(Text)
+241	        return Text
+242	    except:
+243	        res="Unclear picture. Please try Again!"
+244	        print(res)
+245	        say(res)
+246	
+247	
+248	def translate(image):
+249	    try:
+250	        Text = pytesseract.image_to_string(image)
+251	        print(Text)
+252	        cv2.imshow("Frame",image)
+253	        say(Text)
+254	        return Text
+255	    except:
+256	        res="Unclear picture. Please try Again!"
+257	        print(res)
+258	        say(res)
+259	
+260	def operate():
+261	    welcome_message='Vijion begins , Hello again . Have a nice day'
+262	    say(welcome_message)
+263	    getTime()
+264	    flag=False
+265	    for frame in cam.capture_continuous(rawCapture, format="bgr", use_video_port=True):
+266	        image = frame.array
+267	        cv2.imshow("Vision", image)
+268	        key = cv2.waitKey(1)
+269	        rawCapture.truncate(0)
+270	
+271	        if key == ord("D"):
+272	            getTime()
+273	     
+274	        if key == ord("A"):
+275	            x="Add new person is activated"
+276	            say(x)
+277	            addperson(image)
+278	            trainn()
+279	
+280	        if key == ord("F"):
+281	            x="face recognition is activated"
+282	            say(x)
+283	            face_detection(image)
+284	
+285	        if key == ord("S"):
+286	            x="search for thing is activated"
+287	            say(x)
+288	            flag=True
+289	            Break
+290	
+291	        if key == ord("O"):
+292	            x="things recognition is activated"
+293	            say(x)
+294	            object_detection(image)
+295	
+296	        if key == ord("R"):
+297	            x="read english text is activated"
+298	            say(x)
+299	            read(image)
+300	
+301	        if key == ord("T"):
+302	            x="Translating english text is activated"
+303	            say(x)
+304	            translate(image)
+305	
+306	        if key == ord("C"):
+307	            x="Device is closing"
+308	            say(x)
+309	            break
+310	
+311	    if flag:    
+312	        cv2.destroyAllWindows()
+313	        search()
+314	    else:
+315	       cv2.destroyAllWindows()        
+316	
+317	
+318	operate()

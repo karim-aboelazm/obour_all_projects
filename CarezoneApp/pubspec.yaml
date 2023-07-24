@@ -1,0 +1,113 @@
+name: carezone
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  get: ^4.3.8
+  flutter_local_notifications: ^13.0.0
+  flutter_native_timezone: ^2.0.0
+  intl: ^0.17.0
+  google_fonts: ^4.0.3
+  date_picker_timeline: ^1.2.3
+  flutter_staggered_animations: ^1.0.0
+  flutter_svg:
+  rxdart: ^0.27.2
+  http:
+  firebase_core:
+  firebase_auth:
+  cloud_firestore:
+  flutter_icons_null_safety: ^1.1.0
+  flutter_tabler_icons:
+  carousel_slider:
+  flutter_swiper_null_safety:
+  image_picker: ^0.8.6+3
+  sizer: ^2.0.15
+  provider: ^6.0.5
+  shared_preferences:
+  lottie:
+  custom_flutter_painter:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.12.0
+  flutter_lints: ^2.0.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "images/appicon.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - images/person.jpeg
+    - images/empty.png
+    - images/hollow_cirlce_ic.svg
+    - images/left_arrow_ic.svg
+    - images/right_arrow_ic.svg
+    - images/solid_circle_ic.svg
+    - images/solid_circle_ic.svg
+    - images/Lifesavers_Hand.png
+    - images/Lifesavers_New_Patient.png
+    - images/appicon.png
+    - images/appointment.jpg
+    - images/19835.jpg
+    - images/414.jpg
+    - images/doctor-consulting-with-patient-vector.jpg
+    - images/covid.jpg
+    - images/image-medical.jpg
+    - images/vector-doc.jpg
+    - images/search.jpg
+    - images/one.jpg
+    - images/two.jpg
+    - images/three.jpg
+    - images/logoapp.png
+    - images/background.png
+    - images/moreadviceone.jpg
+    - images/moreadvicetwo.jpg
+    - images/moreadvicethree.jpg
+    - images/moreadvicefour.jpg
+    - images/moreadvicefive.jpg
+    - images/bottle.svg
+    - images/pill.svg
+    - images/pill.svg
+    - images/syringe.svg
+    - images/tablet.svg
+    - images/animations/SuccessCheck.flr
+    - images/121988-ai-animation.json
+    - images/100943-perulogy.json
+    - images/card1.jpg
+    - images/card2.jpg
+    - images/card3.jpg
+    - images/2222.jpg
+    - images/333jpg.jpg
+    - images/remindpicjpg.jpg
+    - images/14562381_5500661.jpg
+
+dependency_overrides:
+  firebase_core_platform_interface: 4.5.1
+  firebase_messaging: ^13.0.4
+fonts:
+  - family: Montserrat
+    fonts:
+      - asset: assets/fonts/Montserrat-Bold.ttf
+        weight: 700
+      - asset: assets/fonts/Montserrat-SemiBold.ttf
+        weight: 600
+      - asset: assets/fonts/Montserrat-Medium.ttf
+        weight: 500
+      - asset: assets/fonts/Montserrat-Regular.ttf
+        weight: 400
+      - asset: assets/fonts/Montserrat-Light.ttf
+        weight: 300
