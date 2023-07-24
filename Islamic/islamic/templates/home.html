@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} ISLAMIC {% endblock title %}
+{% block top_content %}
+  <div class="row">
+    <div class="col-md-8 mx-auto " >
+      <script>
+        const messages = [
+          {% for d in duaas%}
+          "{{d}}",
+          {% endfor %}
+          ];
+      
+        function showMessage() {
+          const message = messages[Math.floor(Math.random() * messages.length)];
+          const container = document.createElement("div");
+          container.classList.add("message-container", "show");
+          container.textContent = message;
+          document.body.appendChild(container);
+          setTimeout(() => {
+            container.classList.add("hide");
+            container.classList.remove("show");
+            setTimeout(() => {
+              container.remove();
+            }, 1000);
+          }, 5000);
+        }
+      
+        function startTimer() {
+          setInterval(() => {
+            showMessage();
+          }, 5000);
+        }
+      
+        setTimeout(() => {
+          startTimer();
+        }, 1000);
+      </script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"defer></script>
+      <script> new WOW().init(); </script>
+    </div>
+  </div>
+
+  <div class="balloon">
+    <div class="balloon__text text-white" style="opacity: 0.5;">الله</div>
+    <div class="balloon__string"></div>
+  </div>
+  <script>
+    var names = [{% for name in Allah_names %}"{{ name }}",{% endfor %}];
+    var balloonText = document.querySelector('.balloon__text');
+    var nameIndex = 0;
+    balloonText.textContent = names[nameIndex];
+    setInterval(function() {
+      nameIndex++;
+      if (nameIndex >= names.length) {
+        nameIndex = 0;
+      }
+      balloonText.textContent = names[nameIndex];
+    }, 10000);
+
+  </script>
+
+{% endblock top_content %}
+{% block bottom_content %}      
+  <div class="row my-3">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-7">
+      <audio  autoplay>
+        <source src="{{azan}}" type="audio/mpeg">
+      </audio>
+      <script>
+        var audio = document.getElementById("myAudio");
+        var canPlayAudio = true;
+      
+        function playAudio() {
+          if (canPlayAudio) {
+            audio.play();
+            canPlayAudio = false;
+            setTimeout(function() {
+              canPlayAudio = true;
+            }, 5000);
+          }
+        }
+      
+        window.onload = function() {
+          playAudio();
+        };
+      </script>
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-7 mx-auto">
+      <div class="row">
+        <div class="col mx-1 mb-3" style="background:none;border:2px solid #fff;border-radius:15px;">
+          <div class="card" style="background:none;">
+            <p class="text-center pt-3" style="font-size:20px">الفجر</p>
+            <p class="text-center" style="font-size: 18px;">{{fajr}}</p>
+          </div>
+        </div>
+        <div class="col mx-1 mb-3" style="background:none;border:2px solid #fff;border-radius:15px;">
+          <div class="card" style="background:none;">
+            <p class="text-center pt-3" style="font-size:20px">الظهر</p>
+            <p class="text-center" style="font-size: 18px;">{{dhur}}</p>
+          </div>
+        </div>
+        <div class="col mx-1 mb-3" style="background:none;border:2px solid #fff;border-radius:15px;">
+          <div class="card" style="background:none;">
+            <p class="text-center pt-3" style="font-size:20px">العصر</p>
+            <p class="text-center" style="font-size: 18px;">{{asr}}</p>
+          </div>
+        </div>
+        <div class="col mx-1 mb-3" style="background:none;border:2px solid #fff;border-radius:15px;">
+          <div class="card" style="background:none;">
+            <p class="text-center pt-3" style="font-size:20px">المغرب</p>
+            <p class="text-center" style="font-size: 18px;">{{maghrib}}</p>
+          </div>
+        </div>
+        <div class="col mx-1 mb-3" style="background:none;border:2px solid #fff;border-radius:15px;">
+          <div class="card" style="background:none;">
+            <p class="text-center pt-3" style="font-size:20px">العشاء</p>
+            <p class="text-center" style="font-size: 18px;">{{isha}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+{% endblock bottom_content %}
+{% block header__card__content %}
+  <div class="col-md-3"></div>
+  <div class="col-md-7 pt-3 pb-5 px-5  text-right header__card" id="ayah_num">
+    <div id="ayah-container" class="pt-5 "></div>
+  </div>
+  <div class="col-md-2"></div>
+
+  <style>
+    @media screen and (max-width: 600px) {
+      .message-container {display: none !important;}
+      .balloon {display: none;}
+      #ayah_font {font-size: 15px !important;}
+      #ayah_font1 {font-size: 15px !important;}
+      #ayah_num {font-size: 13px !important;}
+    }
+  </style>
+{% endblock header__card__content %}
