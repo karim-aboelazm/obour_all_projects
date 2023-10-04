@@ -56,7 +56,7 @@ oauthlib==3.2.2
 opt-einsum==3.3.0
 packaging==23.0
 pathy==0.10.1
-Pillow==9.4.0
+Pillow==10.0.1
 preshed==3.0.8
 proglog==0.1.10
 proto-plus==1.22.2
