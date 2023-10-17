@@ -41,7 +41,7 @@ soupsieve==2.4
 sqlparse==0.4.3
 toml==0.10.1
 tzdata==2023.2
-urllib3==1.25.10
+urllib3==1.26.18
 vine==5.0.0
 wcwidth==0.2.6
 wrapt==1.12.1
